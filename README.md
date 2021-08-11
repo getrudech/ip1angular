@@ -14,7 +14,8 @@
 
 ## Setup/Installation requirements
 
-- Clone  or download and unzip the repository from github,[]
+- Clone  or download and unzip the repository from github,[This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+]
 - If you have git Use this command `` to clone the project.
 - Run ng serve from your terminal
 
