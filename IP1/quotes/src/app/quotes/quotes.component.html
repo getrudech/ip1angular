@@ -1,13 +1,27 @@
 <div>
     <h1>My quotes</h1>
     <hr>
-    <ul>
-        <div  *ngFor='let quote of quotes; let i = index'></div>
-      <li >
-        {{quote.quote}}</li>
-        <button (click)='toggleDetails(i)'>Toggle Details</button>
-        <app-quote-detail *ngIf='quote.showAuthor' [quote_data]= 'quote'></app-quote-detail>
+    
+    <div  *ngFor ='let quote of quotes; let i = index'>
+      <ul>
+        <li >{{quote.quote}}</li>
+        <button class="btn btn-outline-info" (click)='toggleDetails(i)'>See More</button>
+        <div *ngIf= 'quote.showAuthor'>
+          <app-quote-detail [quotes]= 'quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
+        </div>
+        <div class="container">
+          <div class="row">
+            <button class="btn btn-outline-info" (click)='addUpvote(i)'>upvotes {{quote.upvotes}}</button>
+            <button class="btn btn-outline-info" (click)='addDownvote(i)'>downvotes {{quote.downvotes}}</button>
+
+
+          </div>
+          
+
+        </div>
       
-    </ul>
+      </ul>
+      
+    
   </div>
   <p *ngIf='quotes.length > 5'>You have too many quotes</p>
