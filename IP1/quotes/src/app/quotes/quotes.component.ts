@@ -9,13 +9,17 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
 
   quotes:Quotes[] = [
-    {id:1, quote:'Watch finding Nemo',author:'Find an online version and watch merlin find his son'},
-    {id:2,quote:'Buy Cookies',author:'I have to buy cookies for the parrot'},
-    {id:3,quote:'Get new Phone Case',author:'Diana has her birthday coming up soon'},
-    {id:4,quote:'Get Dog Food',author:'Pupper likes expensive sancks'},
-    {id:5,quote:'Solve math homework',author:'Damn Math'},
-    {id:6,quote:'Plot my world domination plan',author:'Cause I am an evil overlord'},
+    new Quotes(1, 'Let your light shine', 'Fin bygo'),
+    new Quotes(2,'Buy Cookies','I have to buy cookies for the parrot'),
+    new Quotes(3,'Get new Phone Case','Diana has her birthday coming up soon'),
+    new Quotes(4,'Get Dog Food','Pupper likes expensive snacks'),
+    new Quotes(5,'Solve math homework','Damn Math'),
+    new Quotes(6,'Plot my world domination plan','Cause I am an evil overlord'),
   ];
+
+  toggleDetails(index: any){
+    this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
+  }
   constructor() { }
 
   ngOnInit(): void {

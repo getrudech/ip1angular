@@ -2,9 +2,12 @@
     <h1>My quotes</h1>
     <hr>
     <ul>
-      <li *ngFor='let quote of quotes'>
-        {{quote.quote}}
-        <app-quote-detail> [quote]= 'quotes'</app-quote-detail>
-      </li>
+        <div  *ngFor='let quote of quotes; let i = index'></div>
+      <li >
+        {{quote.quote}}</li>
+        <button (click)='toggleDetails(i)'>Toggle Details</button>
+        <app-quote-detail *ngIf='quote.showAuthor' [quote_data]= 'quote'></app-quote-detail>
+      
     </ul>
   </div>
+  <p *ngIf='quotes.length > 5'>You have too many quotes</p>
