@@ -27,6 +27,7 @@
         <div class="card mastercards" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title">{{quote.title}}</h5>
+            <li appHighlight> {{quote.quote}}</li>
             <button class="btn btn-outline-info" (click)='toggleDetails(i)'>See More</button>
             <p class="card-text">{{quote.quote}}</p>
             <div *ngIf= 'quote.showAuthor'>
