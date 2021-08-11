@@ -21,6 +21,7 @@
 
 ## Live Demo
 To view the page click on the link below
+https://getrudech.github.io/ip1angular/
 
 
 ## Technologies Used
