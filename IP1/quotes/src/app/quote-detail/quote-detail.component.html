@@ -1,2 +1,3 @@
-<p> {{ quotes.author }}, {{ quotes.completeDate}} </p>
+<p> {{ quotes.author }}</p> 
+   <p> this quote was created {{ quotes.completeDate| dateCount}} days ago </p>
 <button (click)= 'quoteComplete(true)'>Complete</button>
