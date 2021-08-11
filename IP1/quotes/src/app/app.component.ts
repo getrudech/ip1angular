@@ -1,3 +1,4 @@
+import { Quote } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,9 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  quotes:string[];
+  quotes:quote[] =[
+    {id:1, name:'Watch find'},
+    {id:2,name:'Buy Cookies'},
+    {id:3,name:'Get new Phone Case'},
+    {id:4,name:'Get Dog Food'},
+    {id:5,name:'Solve math homework'},
+    {id:6,name:'Plot my world domination plan'},
+  ];
 
-  constructor(){
-    this.quotes = ['We can we will and we must', 'jishinde ushinde', 'what you think, you achieve']
+  
   }
-}
+
