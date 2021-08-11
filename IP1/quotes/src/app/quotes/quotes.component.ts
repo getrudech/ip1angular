@@ -33,7 +33,12 @@ export class QuotesComponent implements OnInit {
   addDownvote(index:number){
     this.quotes[index].downvotes +=1;
   }
-
+  addNewQuote(quote:any){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
 
   constructor() { }
 
