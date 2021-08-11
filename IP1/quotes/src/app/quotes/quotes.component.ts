@@ -7,16 +7,16 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-  @Input() quote: Quotes = new Quotes(0,"","",0,0);
+  @Input() quote: Quotes = new Quotes(0,"","","",0,0);
   
 
   quotes:Quotes[] = [
-    new Quotes(1, 'Let your light shine', 'Fin bygo',0,0),
-    new Quotes(2,'We can, we will and we must','Liz Ngure',0,0),
-    new Quotes(3,'Let your heartbelieve it and you will achieve it','Nimo Banks',0,0),
-    new Quotes(4,'My dress my choice','Kenyans',0,0),
-    new Quotes(5,'Mambo sawasawa','Mike Kinyanjui',0,0),
-    new Quotes(6,'Knock and the door shall be opened unto you','Mathew',0,0),
+    new Quotes(1,"Cow", 'Let your light shine', 'Fin bygo',0,0),
+    new Quotes(2,"Cow",'We can, we will and we must','Liz Ngure',0,0),
+    new Quotes(3,"Cow",'Let your heartbelieve it and you will achieve it','Nimo Banks',0,0),
+    new Quotes(4,"Cow",'My dress my choice','Kenyans',0,0),
+    new Quotes(5,"Cow",'Mambo sawasawa','Mike Kinyanjui',0,0),
+    new Quotes(6,"Cow",'Knock and the door shall be opened unto you','Mathew',0,0),
   ];
 
   toggleDetails(index: any){

@@ -2,7 +2,7 @@
     <h1>My quotes</h1>
     <hr>
     
-    <div  *ngFor ='let quote of quotes; let i = index'>
+   <!--  <div  *ngFor ='let quote of quotes; let i = index'>
       <ul>
         <li >{{quote.quote}}</li>
         <button class="btn btn-outline-info" (click)='toggleDetails(i)'>See More</button>
@@ -14,14 +14,39 @@
             <button class="btn btn-outline-info" (click)='addUpvote(i)'>upvotes {{quote.upvotes}}</button>
             <button class="btn btn-outline-info" (click)='addDownvote(i)'>downvotes {{quote.downvotes}}</button>
 
-
           </div>
           
-
         </div>
       
-      </ul>
-      
+      </ul>  
+</div> -->
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div *ngFor ='let quote of quotes; let i = index' >
+        <div class="card mastercards" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{quote.title}}</h5>
+            <button class="btn btn-outline-info" (click)='toggleDetails(i)'>See More</button>
+            <p class="card-text">{{quote.quote}}</p>
+            <div *ngIf= 'quote.showAuthor'>
+              <app-quote-detail [quotes]= 'quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
+            </div>
+            <button class="btn btn-outline-info" (click)='addUpvote(i)'>upvotes {{quote.upvotes}}</button>
+            <button class="btn btn-outline-info" (click)='addDownvote(i)'>downvotes {{quote.downvotes}}</button>
     
+          </div>
+        </div>
+  
+      </div>
+
+    </div>
+  
+    <div class="col-md-7">
+      <!-- Put form here -->
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt beatae doloremque deserunt laborum mollitia consequuntur temporibus corporis deleniti, quo nulla! Autem, illo id nemo recusandae nisi laudantium. Corrupti, earum temporibus!</p>
+    </div>
+   
   </div>
+</div>
   <p *ngIf='quotes.length > 5'>You have too many quotes</p>
