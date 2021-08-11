@@ -11,12 +11,12 @@ export class QuotesComponent implements OnInit {
   
 
   quotes:Quotes[] = [
-    new Quotes(1,"Cow", 'Let your light shine', 'Fin bygo',new Date(2021,6,19),0,0),
-    new Quotes(2,"Cow",'We can, we will and we must','Liz Ngure', new Date(2021,6,19),0,0),
-    new Quotes(3,"Cow",'Let your heartbelieve it and you will achieve it','Nimo Banks',new Date(2021,6,19),0,0),
-    new Quotes(4,"Cow",'My dress my choice','Kenyans',new Date(2021,6,19),0,0),
-    new Quotes(5,"Cow",'Mambo sawasawa','Mike Kinyanjui',new Date(2021,6,19),0,0),
-    new Quotes(6,"Cow",'Knock and the door shall be opened unto you','Mathew',new Date(2021,6,19),0,0),
+    new Quotes(1,"Quote 1", 'Let your light shine', 'Fin bygo',new Date(2021,6,19),0,0),
+    new Quotes(2,"Quote 2",'We can, we will and we must','Liz Ngure', new Date(2021,6,19),0,0),
+    new Quotes(3,"Quote 3",'Let your heartbelieve it and you will achieve it','Nimo Banks',new Date(2021,6,19),0,0),
+    new Quotes(4,"Quote 4",'My dress my choice','Kenyans',new Date(2021,6,19),0,0),
+    new Quotes(5,"Quote 5",'Mambo sawasawa','Mike Kinyanjui',new Date(2021,6,19),0,0),
+    new Quotes(6,"Quote 6",'Knock and the door shall be opened unto you','Mathew',new Date(2021,6,19),0,0),
   ];
 
   toggleDetails(index: any){
